@@ -3,10 +3,11 @@ import { useAppState } from "./state/AppStateContext";
 import { AppContainer } from "./styles";
 import { Column } from "./components/Column";
 import { AddNewItem } from "./components/AddNewItem";
+import { addList } from "./state/actions";
 
 function App() {
-    const { lists } = useAppState();
-    const onAdd = (text: string) => console.log(text);
+    const { lists, dispatch } = useAppState();
+    const onAdd = (text: string) => dispatch(addList(text));
 
     return (
         <AppContainer>
