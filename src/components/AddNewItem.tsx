@@ -19,7 +19,7 @@ export const AddNewItem = ({ onAdd, toggleButtonText, dark }: AddNewItemProps) =
                     setShowForm(false);
                 }}
             />
-        )
+        );
     }
 
     return (
